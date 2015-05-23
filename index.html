@@ -11,6 +11,12 @@
 		<script src="js/bootstrap.min.js"></script>
 		
 		<!--SCRIPT DEPENDENCIES-->
+		<script>
+			$(document).ready(function() {
+  			$('[rel="tooltip"]').tooltip();
+  			
+					});
+		</script>
 
 	</head>
 <body >
@@ -76,9 +82,9 @@
 
 <!--Thumbnail Region Start-->
 <div class="row" id="thumbTune">
-
+	
 	<div class="col-md-2 col-sm-1">
-		<a href="#" class="thumbnail" datatoogle="tooltip" data-placement="top" title="Test Tooltip">
+		<a href="#" class="thumbnail" id="tooltip" datatoogle="tooltip" data-placement="top"  rel="tooltip" title="Click To Access">
 		<div class="thumbnail">
 			<img src="images/thumbnail.jpg"  alt="cipher1"/>
 			
@@ -86,7 +92,7 @@
 		</a>
 	</div>
 	<div class="col-md-2 col-sm-1">
-		<a href="#" class="thumbnail">
+		<a href="#" class="thumbnail"  id="tooltip" datatoogle="tooltip" data-placement="top" rel="tooltip" title="Click To Access" >
 		<div class="thumbnail">
 			<img src="images/thumbnail.jpg" alt="cipher1"/>
 			
@@ -94,7 +100,16 @@
 		</a>
 	</div>
 	<div class="col-md-2 col-sm-1">
-		<a href="#" class="thumbnail">
+		<a href="#" class="thumbnail" id="tooltip" datatoogle="tooltip" data-placement="top"  rel="tooltip" title="Click To Access">
+		<div class="thumbnail">
+			<img src="images/thumbnail.jpg" alt="cipher1"/>
+			
+		</div>
+		</a>
+		
+	</div>
+	<div class="col-md-2 col-sm-1">
+		<a href="#" class="thumbnail" id="tooltip" datatoogle="tooltip" data-placement="top"  rel="tooltip" title="Click To Access">
 		<div class="thumbnail">
 			<img src="images/thumbnail.jpg" alt="cipher1"/>
 			
@@ -102,7 +117,7 @@
 		</a>
 	</div>
 	<div class="col-md-2 col-sm-1">
-		<a href="#" class="thumbnail">
+		<a href="#" class="thumbnail" id="tooltip" datatoogle="tooltip" data-placement="top"  rel="tooltip" title="Click To Access">
 		<div class="thumbnail">
 			<img src="images/thumbnail.jpg" alt="cipher1"/>
 			
@@ -110,15 +125,7 @@
 		</a>
 	</div>
 	<div class="col-md-2 col-sm-1">
-		<a href="#" class="thumbnail">
-		<div class="thumbnail">
-			<img src="images/thumbnail.jpg" alt="cipher1"/>
-			
-		</div>
-		</a>
-	</div>
-	<div class="col-md-2 col-sm-1">
-		<a href="#" class="thumbnail">
+		<a href="#" class="thumbnail" id="tooltip" datatoogle="tooltip" data-placement="top"  rel="tooltip" title="Click To Access">
 		<div class="thumbnail">
 			<img src="images/thumbnail.jpg" alt="cipher1"/>
 			
@@ -145,7 +152,9 @@
 	<div class="container-fluid">
 		
 		<div class="collapse navbar-collapse" id="navbar-elements">
-			<p><a href="#"> &copy TechBridge Labs</a></p>
+			<ul class="nav navbar-nav">
+			<li><a href="#"> &copy TechBridge Labs</a><li>
+			</ul>
 		</div>
 	</div>
 </nav>		
