@@ -6,6 +6,7 @@
 		<title>CipherBox</title>
 		<link href="css/bootstrap.min.css" rel="stylesheet"/>
 		<link href="css/tunes.css" rel="stylesheet"/>
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 		<!--SCRIPT DEPENDENCIES-->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
@@ -36,15 +37,37 @@
 		</div><!--Navbar_Header-->
 		<div class="collapse navbar-collapse" id="navbar-elements">
 			<ul class="nav navbar-nav">
-				<li><a href="#">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="#">Ciphers</a></li>
 				<li><a href="#">About</a></li>
 			</ul>
 		</div>
 	</div>
 </nav>	<!--Navbar End-->
+<div class="container-fluid">
+<h1 class = "ciph-head">
+    <strong>Ceasar Cipher</strong> 
+</h1>
 
+<article class = "ciph-cont">
+    <p>
+        In cryptography, a Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plaintext is replaced by a letter some fixed number of positions down the alphabet. For example, with a left shift of 3, D would be replaced by A, E would become B, and so on. The method is named after Julius Caesar, who used it in his private correspondence.
 
+        The encryption step performed by a Caesar cipher is often incorporated as part of more complex schemes, such as the Vigenère cipher, and still has modern application in the ROT13 system. As with all single-alphabet substitution ciphers, the Caesar cipher is easily broken and in modern practice offers essentially no communication security.
+    </p>
+</article>
+    <h2 class = "ciph-head">
+        <strong>Encrypt</strong>
+    </h2>
+
+<form class="ciph-form">
+    <div class="form-group">
+       <label for="enc-form"> </label>
+       <input type="text" class="form-control" id="enc-form" placeholder="Enter String To Encrpt">
+    </div>
+    <button class="btn btn-primary btn-lg">Encrypt</button>
+</form>
+</div>
 
 
 

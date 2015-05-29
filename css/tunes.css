@@ -1,3 +1,6 @@
+/*
+Main PAGE CSS
+*/
 
 #ciphimage{
 	height: 60px;
@@ -24,4 +27,36 @@
 #thumbAdj{
 	border-radius: 10px;
 	oveflow:hidden
+}
+
+/* 
+Ceasar Cipher Page
+*/
+
+.ciph-head{
+    margin-top:20px;
+    margin-left: 25px;
+    display: block;
+    font-family: 'Poiret One', cursive;
+    font-size: 30px;
+}
+
+.ciph-cont{
+    margin-top:20px;
+    margin-left: 25px;
+    display: block;
+    padding-right:2px;
+    margin-right: 10px;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    text-align:left;
+}
+.ciph-form{
+   
+    margin-left: 25px;
+    display: block;
+    margin-right: 10px;
+    padding-right: 15px;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
 }
