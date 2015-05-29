@@ -10,6 +10,8 @@
 		<!--SCRIPT DEPENDENCIES-->
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/myJs.js"></script>
+
 		
 		<!--SCRIPT DEPENDENCIES-->
 		<script>
@@ -60,19 +62,23 @@
         <strong>Encrypt</strong>
     </h2>
 
-<form class="ciph-form">
+<form name = "form-ceasar" class="ciph-form" action="" method = "post" >
     <div class="form-group">
-       <label for="enc-form"> </label>
-       <input type="text" class="form-control" id="enc-form" placeholder="Enter String To Encrpt">
+       <label for="enc-form"><small>String </small></label>
+       <input type="text" name = "enc-string"class="form-control" id="enc-form" placeholder="Enter String To Encrpt">
     </div>
-    <button class="btn btn-primary btn-lg">Encrypt</button>
+    
+    <div class="form-group">
+       <label for="enc-shift"><small>No. Of Shifts </small></label>
+       <input type="text" name ="enc-shift" class="form-control" id="enc-shift" placeholder="Enter No. Of Shifts">
+    </div>
+    <button onclick="ValidateForm()" class="btn btn-primary btn-lg">Encrypt</button>
 </form>
+
 </div>
 
 
-
-
-
+<div id="enc-text" ></div>
 
 
 

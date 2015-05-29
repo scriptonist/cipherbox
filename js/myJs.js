@@ -22,18 +22,34 @@ function encrypt(msg,shift)
   return msg;
 }
 
-function formValidation()
+function ValidateForm()
 {
     inp = document.forms["form-ceasar"]["enc-string"].value;
     shft = document.forms["form-ceasar"]["enc-shift"].value;
     if(inp == null || inp =='' || shft == null || shft == "")
     {
       alert("Please Fill The Required Fields!");
-      return false;
+      
     }
     else
     {
-alert("test");
-      return true;
+      submittedForm();
+      
+      
+    
+      
     }
+
+}
+
+function submittedForm()
+{
+  
+    var msg = String(document.getElementById("enc-form").value);
+    var shift = parseInt(document.getElementById("enc-shift").value);
+    encoded = "Encoded Message IS : " + encrypt(msg,shift);
+    document.getElementById("enc-text").innerHTML  = encoded;
+
+
+  
 }
