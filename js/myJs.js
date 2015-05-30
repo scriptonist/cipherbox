@@ -24,8 +24,8 @@ function encrypt(msg,shift)
 
 function ValidateForm()
 {
-    inp = document.forms["form-ceasar"]["enc-string"].value;
-    shft = document.forms["form-ceasar"]["enc-shift"].value;
+    inp = document.getElementById("enc-form").value ;
+    shft = document.getElementById("enc-shift").value;
     if(inp == null || inp =='' || shft == null || shft == "")
     {
       alert("Please Fill The Required Fields!");
@@ -34,10 +34,6 @@ function ValidateForm()
     else
     {
       submittedForm();
-      
-      
-    
-      
     }
 
 }
@@ -47,8 +43,13 @@ function submittedForm()
   
     var msg = String(document.getElementById("enc-form").value);
     var shift = parseInt(document.getElementById("enc-shift").value);
-    encoded = "Encoded Message IS : " + encrypt(msg,shift);
-    document.getElementById("enc-text").innerHTML  = encoded;
+    encoded = encrypt(msg,shift) ;
+    encoded = "Encoded String :  " + encoded.toUpperCase();
+
+    document.getElementById("enc-text").setAttribute("class","alert alert-success ciph-cont");
+    document.getElementById("enc-text").role ="alert";
+    document.getElementById("enc-text").innerHTML  ="<h2>Success!</h2> <br>"+"<strong>" +encoded+"</strong"
+    + "<br><br><br><small><a class='btn btn-default' href='ceasar.html' class ='alert-link'>encode another</a></small";
 
 
   
