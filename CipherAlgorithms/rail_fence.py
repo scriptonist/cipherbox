@@ -1,43 +1,51 @@
 import os
-os.system("cls")
+os.system("clear")
 
 def encrypt(msg,key):
-	msg = msg.lower()
+	msg = msg.replace(' ','')
 	msg = list(msg)
-	list_no=0
-	key_list = [[] for i in range(key) ]
-	for index,item in enumerate(msg):
-		if list_no == 0 and list_no<len(key_list):
-			key_list[list_no].append(item)
-			key_list[list_no+1].append(".")
-			key_list[list_no+2].append(".") 
-			list_no += 1
-		elif list_no == 1 and list_no<len(key_list):
-			key_list[list_no-1].append(".")
-			key_list[list_no].append(item)
-			key_list[list_no+1].append(".")
-			list_no += 1 
-		elif list_no == 2 and list_no<len(key_list):
-			key_list[list_no-2].append(".")
-			key_list[list_no-1].append(".")
-			key_list[list_no].append(item) 
-			list_no = 0
-	
+	rows = [[] for i in range(key)]
+	#Initialise Each Row with .
+	for row in rows:
+		for i in range(len(msg)):
+			row.append('.')
+	index = 0 
+	rc = 0
+	fl = 0
+	for alpha in msg:
+		
+		rows[rc][index] = alpha
+		index += 1
+		if(fl == 0):
+			rc +=1
+		else:
+			rc -=1
+		if rc == key:
+			fl = 1
+			rc -=2
+		if rc == 0:
+			fl = 0
+	for row in rows :
+		print row
+
 	enc = []
-	key_list_length = len(key_list)
-	key_list_item_length = len(key_list[0])
-	for item in key_list:
-		print item
-		print 
-	for item in range(key_list_length):
-		for ind in range(key_list_item_length) :
-			if  key_list[item][ind]!= '.':
-				enc.append(key_list[item][ind])
+	for row in rows:
+		for item in row:
+			if item != '.':
+				enc.append(item)
+
+
+	
+	enc = ''.join(enc)
+	return enc
+
+
+
+
+		
+
 	
 
-	enc = ''.join(enc)
-	print enc
 
 
-
-encrypt("defend the east wall of the castle",3)
+print encrypt("defend the east wall of the castle",5)

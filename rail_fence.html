@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<title>CipherBox</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="css/tunes.css" rel="stylesheet"/>
+        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<!--SCRIPT DEPENDENCIES-->
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/myJs.js"></script>
+
+		
+		<!--SCRIPT DEPENDENCIES-->
+		<script>
+			$(document).ready(function() {
+  			$('[rel="tooltip"]').tooltip();
+  			
+					});
+		</script>
+
+	</head>
+<body >
+<nav class="navbar navbar-inverse navbar-postion-fixed">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-elements">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<!--Brand Icon -->
+			<a href="#"  class="navbar-brand"><div id="ciphimgeadj" ><img id="ciphimage" src="images/banner2.jpg"/></div></a>
+
+		</div><!--Navbar_Header-->
+		<div class="collapse navbar-collapse" id="navbar-elements">
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Ciphers</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>	<!--Navbar End-->
+<div class="container-fluid">
+<h1 class = "ciph-head">
+    <strong>Rail Fence Cipher</strong> 
+</h1>
+
+<article class = "ciph-cont">
+    <p>
+        The term zigzag cipher may refer to the rail fence cipher as described above. However, it may also refer to a different type of cipher system that looks like a zigzag line going from the top of the page to the bottom. As described in Fletcher Pratt's Secret and Urgent, it is "written by ruling a sheet of paper in vertical columns, with a letter at the head of each column. A dot is made for each letter of the message in the proper column, reading from top to bottom of the sheet. The letters at the head of the columns are then cut off, the ruling erased and the message of dots sent along to the recipient, who, knowing the width of the columns and the arrangement of the letters at the top, reconstitutes the diagram and reads what it has to say.
+    </p>
+</article>
+    <h2 class = "ciph-head">
+        <strong>Encrypt</strong>
+    </h2>
+
+	<div class = "ciph-cont">
+    <div class="form-group">
+       <label for="enc-form"><small>String </small></label>
+       <input type="text" name = "enc-string"class="form-control" id="enc-form" placeholder="Enter String To Encrpt">
+    </div>
+    
+    <div class="form-group">
+       <label for="enc-shift"><small>No. Of Shifts </small></label>
+       <input type="text" name ="enc-shift" class="form-control" id="enc-shift" placeholder="Enter No. Of Shifts">
+    </div>
+    <button onclick="ValidateForm()" class="btn btn-primary btn-lg">Encrypt</button>
+	</div>
+
+
+<div id="enc-text"  role=""></div>
+<!--Encryption Form END -->
+
+<h2 class = "ciph-head">
+        <strong>Decrypt</strong>
+    </h2>
+
+<div class = "ciph-cont">
+    <div class="form-group">
+       <label for="dec-form"><small>String </small></label>
+       <input type="text" name = "dec-string"class="form-control" id="dec-form" placeholder="Enter String To Decrpt">
+    </div>
+    
+    <div class="form-group">
+       <label for="dec-shift"><small>No. Of Shifts </small></label>
+       <input type="text" name ="enc-shift" class="form-control" id="dec-shift" placeholder="Enter No. Of Shifts">
+    </div>
+    <button onclick="ValidateForm2()" class="btn btn-primary btn-lg">Decrypt</button>
+</div>
+
+<div id="dec-text"  role=""></div>
+<!--Decrypt Form END-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+	
+
+</html>
