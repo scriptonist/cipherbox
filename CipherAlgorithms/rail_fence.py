@@ -48,4 +48,4 @@ def encrypt(msg,key):
 
 
 
-print encrypt("defend the east wall of the castle",5)
+print encrypt("defend the east wall of the castle",3)
