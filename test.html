@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animatetest</title>
+    <style>
+        @keyframes animatedBackground{
+            from{background-position:0 0;}
+            to{background-position: 100% 0;}
+        }
+        #animate{
+            width:1500px;
+            height:25000px;
+            background-image: url("images/05-white-brick.png");
+            background-position:  0px 0px;
+            background-repeat: repeat-x;
+            
+            animation:animatedBackground 40s linear infinite;
+        }
+            
+    </style>
+</head>
+<body>
+   <div id="animate">
+       
+   </div> 
+</body>
+</html>
