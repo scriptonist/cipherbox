@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>CipherBox</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/tunes.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="../images/icons/computer-57-20369.png">
+    <!--SCRIPT DEPENDENCIES-->
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/atbash.js"></script>
+
+
+    <!--SCRIPT DEPENDENCIES-->
+    <script>
+        $(document).ready(function () {
+            $('[rel="tooltip"]').tooltip();
+
+        });
+    </script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-postion-fixed">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!--Brand Icon -->
+                <a href="../index.html" class="navbar-brand">
+                    <div id="ciphimgeadj"><img id="ciphimage" src="../images/banner2.jpg" />
+                    </div>
+                </a>
+
+            </div>
+            <!--Navbar_Header-->
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../index.html">Home</a>
+                    </li>
+                      <!--DROPDOWN START-->
+                    <li class="dropdown nav-links-custom">
+                        <a class="dropdown-toggle hvr-underline-from-center" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Ciphers <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ><a href="../pages/ceasar.html" class="hvr-curl-top-right">Ceasar Cipher</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="../pages/rail_fence.html" class="hvr-curl-top-right">Rail Fence Cipher</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="../pages/atbash.html" class="hvr-curl-top-right">Atbash Cipher</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                               <a href="../pages/simple-substitution.html" class="hvr-curl-top-right">Simple-Substitution-Cipher</a> 
+                            </li>
+                        </ul>
+
+                    </li>
+                    <!--DROPDOWN END-->
+                    <li><a href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--Navbar End-->
+    <div class="container-fluid">
+        <h1 class="ciph-head">
+    Atbash Cipher 
+</h1>
+
+        <article class="ciph-cont">
+            <p>
+                Atbash (also transliterated Atbaš) is a simple substitution cipher for the Hebrew alphabet. It consists in substituting aleph (the first letter) for tav (the last), beth (the second) for shin (one before last), and so on, reversing the alphabet. Hence the name, Aleph-Tav-Beth-Shin (אתבש). In the Book of Jeremiah, לב קמי Lev Kamai (51:1) is Atbash for כשדים Kasdim (Chaldeans), and ששך Sheshakh (25:26; 51:41) is Atbash for בבל Bavel (Babylon). It has been associated with the esoteric methodologies of Jewish mysticism's interpretations of Hebrew religious texts as in the Kabbalah.
+            </p>
+        </article>
+        <h2 class="ciph-head">
+       Encrypt
+    </h2>
+
+        <div class="ciph-cont">
+            <div class="form-group">
+                <label for="enc-form">String </label>
+                <input type="text" name="enc-string" class="form-control" id="enc-form" placeholder="Enter String To Encrpt">
+            </div>
+
+
+            <button onclick="ValidateForm()" class="btn btn-primary btn-lg">Encrypt</button>
+        </div>
+
+
+        <div id="enc-text" role=""></div>
+        <!--Encryption Form END -->
+
+        <h2 class="ciph-head">
+        Decrypt
+    </h2>
+
+        <div class="ciph-cont">
+            <div class="form-group">
+                <label for="dec-form">String</label>
+                <input type="text" name="dec-string" class="form-control" id="dec-form" placeholder="Enter String To Decrpt">
+            </div>
+
+
+            <button onclick="ValidateForm2()" class="btn btn-primary btn-lg">Decrypt</button>
+        </div>
+
+        <div id="dec-text" role=""></div>
+        <!--Decrypt Form END-->
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

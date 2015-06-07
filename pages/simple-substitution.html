@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+		<title>CipherBox</title>
+		<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="../css/tunes.css" rel="stylesheet"/>
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="../images/icons/computer-57-20369.png">
+		<!--SCRIPT DEPENDENCIES-->
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/simple-subtitution.js"></script>
+
+		
+		<!--SCRIPT DEPENDENCIES-->
+		<script>
+			$(document).ready(function() {
+  			$('[rel="tooltip"]').tooltip();
+  			
+					});
+		</script>
+
+	</head>
+<body >
+<nav class="navbar navbar-inverse navbar-postion-fixed">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-elements">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<!--Brand Icon -->
+			<a href="../index.html"  class="navbar-brand"><div id="ciphimgeadj" ><img id="ciphimage" src="../images/banner2.jpg"/></div></a>
+
+		</div><!--Navbar_Header-->
+		<div class="collapse navbar-collapse" id="navbar-elements">
+			<ul class="nav navbar-nav">
+				<li><a href="../index.html">Home</a></li>
+				
+                       <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Ciphers <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="../pages/ceasar.html">Ceasar Cipher</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="../pages/rail_fence.html">Rail Fence Cipher</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="../pages/atbash.html">Atbash Cipher</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                                <a href="../pages/simple-substitution.html">Simple-Substitution Cipher</a>
+                            </li>
+                        </ul>
+
+                    </li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>	<!--Navbar End-->
+<div class="container-fluid">
+<h1 class = "ciph-head">
+    <strong>Simple Substitution Cipher</strong> 
+</h1>
+
+<article class = "ciph-cont">
+    <p>
+       The simple substitution cipher is a cipher that has been in use for many hundreds of years (an excellent history is given in Simon Singhs 'the Code Book'). It basically consists of substituting every plaintext character for a different ciphertext character. It differs from the Caesar cipher in that the cipher alphabet is not simply the alphabet shifted, it is completely jumbled.
+
+The simple substitution cipher offers very little communication security, and it will be shown that it can be easily broken even by hand, especially as the messages become longer (more than several hundred ciphertext characters).
+   <a href="http://practicalcryptography.com/ciphers/simple-substitution-cipher/">Read More</a>
+    </p>
+</article>
+    <h2 class = "ciph-head">
+        <strong>Encrypt</strong>
+    </h2>
+
+	<div class = "ciph-cont">
+    <div class="form-group">
+       <label for="enc-form"><small>String </small></label>
+       <input type="text" name = "enc-string"class="form-control" id="enc-form" placeholder="Enter String To Encrpt">
+    </div>
+    
+    <div class="form-group">
+       <label for="enc-shift"><small>Enter Key </small></label>
+       <input type="text" name ="enc-shift" class="form-control" id="enc-shift" placeholder="Enter 26 alphabets in order">
+    </div>
+    <button onclick="ValidateForm()" class="btn btn-primary btn-lg">Encrypt</button>
+	</div>
+
+
+<div id="enc-text"  role=""></div>
+<!--Encryption Form END -->
+
+<h2 class = "ciph-head">
+        <strong>Decrypt</strong>
+    </h2>
+
+<div class = "ciph-cont">
+    <div class="form-group">
+       <label for="dec-form"><small>String </small></label>
+       <input type="text" name = "dec-string"class="form-control" id="dec-form" placeholder="Enter String To Decrpt">
+    </div>
+    
+    <div class="form-group">
+       <label for="dec-shift"><small>Enter Key </small></label>
+       <input type="text" name ="enc-shift" class="form-control" id="dec-shift" placeholder="Enter the key(26 alphabets)">
+    </div>
+    <button onclick="ValidateForm2()" class="btn btn-primary btn-lg">Decrypt</button>
+</div>
+
+    <div id="dec-text"  role=""></div>
+<!--Decrypt Form END-->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+	
+
+</html>

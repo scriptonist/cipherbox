@@ -61,14 +61,17 @@ form.ciph-form{
    font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 20px;
 }
+
+/*MAIN PAGE ANIMATION */
 #background-animate{
     width:1345px;
-    height:1000px;
-    background-image: url();
+    height:830px;
+    background-image: url(../images/1369637-minimal-wallpapers-hd.png);
     background-position: 0px 0px;
     background-repeat:repeat-x;
     animation:animateBackground 40s linear infinite;
 }
+
 @keyframes animateBackground
 {
     from {background-position: 0 0;}
@@ -76,8 +79,9 @@ form.ciph-form{
 }
 .circle-btn{
     margin-left: 25px;
-    width: 200px;
-  height: 200px;
+    margin-right:50px;
+    width: 150px;
+  height: 150px;
   text-align: center;
   padding: 6px 0;
   font-size: 12px;
@@ -90,4 +94,23 @@ form.ciph-form{
     font-size: 20px;
 }
 
+.cst-footer{
+    
+    width:1345px;
+    height:100px;
+    background-color:#222222;
+}
+#footer-img-adj{
+    margin-top:0;
+    padding-top:24px;
+    width: 200px;
+    height:70px;
+}
+.button-adj{
+    margin-top:50px;
+}
+
+.nav-links-custom{
+    margin-left:20px;
+}
     

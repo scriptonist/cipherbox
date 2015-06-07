@@ -133,6 +133,10 @@ function decrypt(msg,key)
     
 }
 
+/*-----------------------------------------------------
+------END OF ENCRYPT AND DECRYPT FUNCTIONS ------------
+------------------------------------------------------*/
+
 function ValidateForm()
 {
     inp = document.getElementById("enc-form").value ;

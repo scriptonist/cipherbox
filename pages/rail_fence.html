@@ -4,13 +4,14 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 		<title>CipherBox</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet"/>
-		<link href="css/tunes.css" rel="stylesheet"/>
-        <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="../css/tunes.css" rel="stylesheet"/>
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" href="../images/icons/computer-57-20369.png">
 		<!--SCRIPT DEPENDENCIES-->
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/railfence-main.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/railfence-main.js"></script>
 
 		
 		<!--SCRIPT DEPENDENCIES-->
@@ -34,13 +35,34 @@
 			<span class="icon-bar"></span>
 			</button>
 			<!--Brand Icon -->
-			<a href="#"  class="navbar-brand"><div id="ciphimgeadj" ><img id="ciphimage" src="images/banner2.jpg"/></div></a>
+			<a href="../index.html"  class="navbar-brand"><div id="ciphimgeadj" ><img id="ciphimage" src="../images/banner2.jpg"/></div></a>
 
 		</div><!--Navbar_Header-->
 		<div class="collapse navbar-collapse" id="navbar-elements">
 			<ul class="nav navbar-nav">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Ciphers</a></li>
+				<li><a href="../index.html">Home</a></li>
+				
+                             <!--DROPDOWN START-->
+                    <li class="dropdown nav-links-custom">
+                        <a class="dropdown-toggle hvr-underline-from-center" data-toggle="dropdown" role="button" aria-expanded="false" href="#">Ciphers <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li ><a href="../pages/ceasar.html" class="hvr-curl-top-right">Ceasar Cipher</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="../pages/rail_fence.html" class="hvr-curl-top-right">Rail Fence Cipher</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="../pages/atbash.html" class="hvr-curl-top-right">Atbash Cipher</a>
+                            </li>
+                            <li class="divider">
+                            </li>
+                            <li>
+                               <a href="../pages/simple-substitution.html" class="hvr-curl-top-right">Simple-Substitution-Cipher</a> 
+                            </li>
+                        </ul>
+
+                    </li>
+                    <!--DROPDOWN END-->
 				<li><a href="#">About</a></li>
 			</ul>
 		</div>
