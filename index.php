@@ -1,3 +1,6 @@
+<?php require("./phppages/connectDB.php");
+	
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,10 +16,10 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
     <link rel="shortcut icon" href="../images/icons/computer-57-20369.png">
     <!--SCRIPT DEPENDENCIES-->
-    <script src="js/xml.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/mainPage.js"></script>
+    <script src="js/xml.js"></script>
 
     <!--SCRIPT DEPENDENCIES-->
 
@@ -70,11 +73,32 @@
                     </li>
                     <li class="nav-links-custom"><a href="#" class="hvr-underline-from-center">About</a>
                     </li>
-                    
+                 
                 </ul>
-                <li class="nav-links-custom"><button type="button" class="btn btn-default navbar-btn pull-right" data-toggle="modal" data-target="#login">
+                 <?php
+
+	session_start();
+
+if(!(isset($_SESSION['username'])))
+{
+echo '<span class="nav-links-custom"><button type="button" class="btn btn-default navbar-btn pull-right" data-toggle="modal" data-target="#login">
   Login
-					</button></li>
+					</button></span>';
+}
+else{
+
+	echo '<ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">'.'<span class="glyphicon glyphicon-user" aria-hidden="true"></span> '.$_SESSION["username"].'<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="./logout.php">Logout</a></li>
+          </ul>
+        </li>
+      </ul>';
+}
+?>
+                
                 
 
             </div>
@@ -137,7 +161,8 @@
 
 
     </div>
-	<!-- Modal -->
+	
+<!-- Modal -->
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -160,17 +185,13 @@
      <div id="info"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" onClick="reload_page()" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" onClick="process()"  class="btn btn-primary">Login</button>
       </div>
     </div>
   </div>
 </div>
 <!--ModalEnd-->
-
-
-
-
 
 
 
